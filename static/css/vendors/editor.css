@@ -1,0 +1,106 @@
+.rte_toolbar [data-wysihtml5-action] {
+	float: right;
+}
+  
+.rte_toolbar,
+textarea.rte {
+	padding: 5px;
+	-webkit-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+  
+textarea.rte {
+	height: 280px;
+	width: 100%;
+	border: 1px solid #ccc;
+	border-top: 0px;
+	font-size: 12px;
+	font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+}
+  
+textarea:focus {
+	border-color: #999;
+}
+  
+.wysihtml5-command-active {
+	font-weight: bold;
+}
+  
+[data-wysihtml5-dialog] {
+	margin: 5px 0 0;
+	padding: 5px;
+	border: 1px solid #666;
+}
+
+.rte_toolbar {
+	background: #999;
+	overflow: hidden;
+}
+
+.rte_toolbar nav {
+	display: block;
+	background-color: #ccc;
+}
+
+.rte_toolbar nav ul {
+	display: inline;
+	list-style: none;
+	position: relative;
+	overflow: visible;
+}
+
+.rte_toolbar nav ul li {
+	float: left; 
+	display: block;
+	margin: 0 5px;
+}
+.rte_toolbar nav ul li div {
+	float: left;
+}
+
+.rte_toolbar nav ul li ul { 
+	position: absolute;
+	display: none;
+	top: 16px;
+	margin-left: -70px;
+	float: left	;
+}
+
+.rte_toolbar nav ul li:hover ul { 
+	display: block; 
+}
+
+.rte_toolbar nav ul li ul li {
+	display: block;
+	border: 1px solid #999;
+	float: none;
+}
+
+a[data-wysihtml5-command-value="red"] {
+	color: red !important;
+}
+  
+a[data-wysihtml5-command-value="green"] {
+	color: green !important;
+}
+  
+a[data-wysihtml5-command-value="blue"] {
+	color: blue !important;
+}
+
+.wysiwyg-color-red {
+	color: red;
+}
+
+.wysiwyg-color-green {
+	color: green;
+}
+
+.wysiwyg-color-blue {
+	color: blue;
+}
+
+
+
