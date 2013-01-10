@@ -10,6 +10,10 @@ html {
 
 html, body, #wrapper { height: 100%; }
 
+#wrapper{
+    background: url('/static/images/bg-texture.png');
+}
+
 #loader.full {
     z-index: 999999;
     position: absolute;
@@ -63,11 +67,14 @@ html, body, #wrapper { height: 100%; }
 
 header {
     padding: 15px 10px 10px;
-    background-color: #000;
-    color: #fff;
+    background-color: white;
+    background-image: url('/static/images/bg-texture.png');
+    color: white;
     height: 54px;
     z-index: 100;
+    border-bottom: 2px solid #E3E3E3;
 }
+
 header a {
     color: #ccc;
 }
