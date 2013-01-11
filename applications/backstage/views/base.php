@@ -18,6 +18,9 @@
 
     <link rel="stylesheet"  href="<?php echo base_url(); ?>static/css/normalize.css"> <?php // We only need one Reset, if replacing please list why in commit messages ?>
     <link rel="stylesheet" href="<?php echo base_url(); ?>static/css/main.css">
+	
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900' rel='stylesheet' type='text/css'>
+	
 </head>
 <body>
 <?php /*
@@ -31,56 +34,65 @@
 	
 <div id="wrapper">
     <header class="clearfix">
-		<div id="logo">
-       		<a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>static/images/rumblefish-logo.png" /></a>
-			<div id="loader" class="small">
-				<div class="load-container">
-					<?php if ( $this->data->user->type == "admin" ) : ?>
-						<img src="<?php echo base_url(); ?>static/images/oag_loading.gif" alt="loading" />
-					<?php else: ?>
-						<img src="<?php echo base_url(); ?>static/images/loading_small.gif" alt="loading" />
-					<?php endif; ?>
+		<div class="inner">
+			<div id="logo">
+				<a href="<?php echo base_url(); ?>"><img src="<?php echo base_url(); ?>static/images/rf-darklogo.png" id="top-logo" /></a>
+				<div id="loader" class="small">
+					<div class="load-container">
+						<?php if ( $this->data->user->type == "admin" ) : ?>
+							<img src="<?php echo base_url(); ?>static/images/oag_loading.gif" alt="loading" />
+						<?php else: ?>
+							<img src="<?php echo base_url(); ?>static/images/loading_small.gif" alt="loading" />
+						<?php endif; ?>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id="welcome-the-user">
-			<ul>
-				<?php if ( Core_Model::LoggedIn() ) : ?>
-				<li>Welcome: <a href="<?php echo base_url(); ?>user/account"><?php echo $user->user_name; ?></a></li>
-				<li id="login-logout-action">
-					<a href="<?php echo base_url(); ?>user/logout" id="user-logout">
-						Logout
-					</a>
-				</li>
-	            <?php endif; ?>
-			</ul>
+			<div id="welcome-the-user">
+				<ul>
+					<?php if ( Core_Model::LoggedIn() ) : ?>
+					<li>Welcome, <a href="<?php echo base_url(); ?>user/account"><?php echo $user->user_name; ?></a></li>
+					<li id="login-logout-action">
+						<a href="<?php echo base_url(); ?>user/logout" id="user-logout">
+							Logout
+						</a>
+					</li>
+					<?php endif; ?>
+					<li><img src="<?php echo base_url(); ?>static/images/backstage-logo.png" id="bs-logo"/></li>
+				</ul>
+			</div>
 		</div>
     </header>
 
 	<div id="container">
 		<section id="player">
-			
+			<div class="inner">
+				
+			</div>	
 		</section>
-		
 		<nav id="navbar">
-        	<ul>
-				<?php 
-					if ( Core_Model::LoggedIn() && Core_Controller::isAdmin() ) :
-						$this->load->view('admin/navigation', $data);
-					elseif( Core_Model::LoggedIn() && $page->top->meta->display_child_nav ) :
-						foreach ( $page->top->children as $child ) :
-							echo '<li><a href="'.$child->url.'">'.$child->title.'</a></li>';
-						endforeach;
-		        	endif; 
-				?>
-	        </ul>
+			<div class="inner">
+				<ul>
+					<?php 
+						if ( Core_Model::LoggedIn() && Core_Controller::isAdmin() ) :
+							$this->load->view('admin/navigation', $data);
+						elseif( Core_Model::LoggedIn() && $page->top->meta->display_child_nav ) :
+							foreach ( $page->top->children as $child ) :
+								echo '<li><a href="'.$child->url.'">'.$child->title.'</a></li>';
+							endforeach;
+						endif; 
+					?>
+				</ul>
+			</div>
 		</nav>
 		
-	    <section id="body">
-	    	
-			
-			
-	    </section>
+		<div class="inner">
+			<section id="body">
+				
+				
+				
+				
+			</section>
+		</div>
 	
 	
 		<p>Copyright <?php echo date("Y"); ?> Rumblefish, Inc.</p>
