@@ -8,7 +8,11 @@ html {
     text-align: left;
 }
 
-html, body, #wrapper { height: 100%; }
+html, body, #wrapper {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
 
 body{
     font-family: 'Lato', sans-serif;
@@ -17,6 +21,15 @@ body{
 
 h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
+}
+
+a{
+    color:#444444;
+    text-decoration: underline;
+}
+
+a:hover{
+    text-decoration: none;
 }
 
 .button, .submit{
@@ -73,6 +86,14 @@ h1, h2, h3, h4, h5, h6{
     text-transform: uppercase;
     font-weight: 900;
     font-size: .9em;
+}
+
+input[type="text"], input[type="password"]{
+    padding:3px;
+    border-radius:1px;
+    -moz-border-radius: 1px;
+    -webkit-border-radius: 1px;
+    border: 1px solid #999999;
 }
 
 #wrapper{
@@ -453,10 +474,6 @@ header a {
 }
 
 .listing {
-    
-    
-    
-    
 }
 
 .listing .listing-header {
@@ -634,14 +651,18 @@ div.lightbox-confirmdelete{
   display: none;
 }
 
-
-
 .search-row-details {
     background: #ccc;
     display: none;
 }
 
+/* Log In Page */
+#loginForm{
+    margin: 45px 0;
+}
 
-
+dl.form-item dd{
+    margin: 0 0 10px 40px;
+}
 
 @import url('boilerplate-end.css');
